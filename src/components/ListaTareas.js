@@ -24,7 +24,7 @@ const ListaTareas = ({ tareas, setTareas, activarFiltro, }) => {
     const result = window.confirm(`¿Desdeas eliminar la tarea: "${ tareaEliminar.texto }"`)
 
     if( result ){
-      const tareasFiltradas = tareas.filter( tareaState => tareaState.id != tareaEliminar.id );
+      const tareasFiltradas = tareas.filter( tareaState => tareaState.id !== tareaEliminar.id );
       setTareas( tareasFiltradas )
     }
   }
